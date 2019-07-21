@@ -1,0 +1,53 @@
+<!-- <view class='list'>
+  <view class='author'>
+    <image src='/image/img/photo1.jpg'></image>
+    张三丰
+  </view>
+
+  <image class='big-pic' src='/image/bigPic.png'></image>
+
+  <view class='tit'>
+    <view>热点</view>
+    任正非：没想到美国打击华为的决心如此之大，但阻挠不了前进步伐
+  </view>
+
+  <view class='intro'>
+    华为创始人兼 CEO 任正非在采访中表示，没有想到美国打击我们华为的战略决心如此之大，如
+此坚定不移 ... 
+  </view>
+
+  <view class='botm-cont'>
+    <view>8980点击 · 6本书</view>
+    <view>336</view>
+  </view>
+</view> -->
+<view class='count'>
+
+  <view class='list' wx:for='{{listData}}' wx:key='{{index}}'>
+    <view class='author'>
+      <view class='author-left'>
+        <image src='{{item.aPhoto}}'></image>
+        <view>{{item.author}}</view>
+      </view>
+    </view>
+
+    <image class='big-pic' src='{{item.bigImg}}'  bindtap='handleList' data-idx='{{index}}'></image>
+
+    <view class='tit'  bindtap='handleList' data-idx='{{index}}'>
+      <view>热点</view>
+      {{item.tit}}
+    </view>
+
+    <view class='intro' bindtap='handleList' data-idx='{{index}}'>
+      {{item.intro}}
+    </view>
+
+    <view class='botm-cont'>
+      <view>{{item.clickNum}}点击 · 6本书</view>
+      <view>
+        {{item.great}}
+        <text class='iconfont icon-praise_icon' bindtap='handleAddd' data-idx='{{item.objId}}'></text>
+      </view>
+    </view>
+  </view>
+</view>

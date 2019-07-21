@@ -1,0 +1,66 @@
+<view class='cont'>
+  <view class='headTop'>
+    <button class='editTit'>编辑</button>
+
+    <view class='headPortrait'>
+      <!-- <image src='/image/img/photo2.jpg'></image>
+      <text class='iconfont icon-nan'></text>
+      <text class='userName'>臻子</text> -->
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键登录或一键注册</button>
+        <block wx:else>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+           <text class='{{userInfo.gender==1?"iconfont icon-nan":"iconfont icon-nv"}}'></text>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+
+    <view class='userRecords'>
+      <view class='box readTime'>
+        <text class='time'>0分钟</text>
+        <text class='tit'>读书时长</text>
+      </view>
+      <view class='verticalLine'></view>
+      <view class='box booksMoney'>
+        <text class='money'>0</text>
+        <text class='tit'>蜗牛壳</text>
+      </view>
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+
+  </view>
+
+  <view class='dividingLine'></view>
+
+  <view class='footBottom'>
+    <view class='footList' bindtap='handlebookManage'>
+      <text class='iconfont icon-caidan type'></text>
+      <text class='tit'>图书管理</text>
+      <text class='iconfont icon-jiantou jiantou'></text>
+    </view>
+    <view class='footList'>
+      <text class='iconfont icon-caidan type'></text>
+      <text class='tit'>我的书单·书评</text>
+      <text class='iconfont icon-jiantou jiantou'></text>
+    </view>
+    <view class='footList' bindtap='handlereadManage'>
+      <text class='iconfont icon-caidan type'></text>
+      <text class='tit'>领读管理</text>
+      <text class='iconfont icon-jiantou jiantou'></text>
+    </view>
+    <view class='footList'bindtap='handleclassifyManage'>
+      <text class='iconfont icon-caidan type'></text>
+      <text class='tit'>分类管理</text>
+      <text class='iconfont icon-jiantou jiantou'></text>
+    </view>
+    <!-- <view class='footList'>
+      <text class='iconfont icon-caidan type'></text>
+      <text class='tit'>系统设置</text>
+      <text class='iconfont icon-jiantou jiantou'></text>
+    </view> -->
+  </view>
+
+
+
+</view>

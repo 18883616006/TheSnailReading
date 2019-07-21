@@ -1,0 +1,43 @@
+<!--pages/classify/classify.wxml-->
+<view class='main'>
+  <view class='cont'>
+    <view class='item' wx:for='{{hot}}' wx:key='{{index}}'>
+      <image src='{{item.imgUrl}}'></image>
+      <view>
+        <text class='tit'>{{item.tit}}</text>
+        <text class='fs-20'>{{item.en_tit}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='line'>
+    <text>分类</text>
+  </view>
+
+  <view class='cont classify'>
+    <view 
+    class='item' 
+    wx:for='{{classify}}' 
+    data-cfy='{{item.cfy}}' 
+    wx:key='{{index}}' 
+    bindtap='handleClassify'>
+      <image src='{{item.imgUrl}}'></image>
+      <view>
+        <text class='tit'>{{item.tit}}</text>
+      </view>
+    </view>
+    <!-- <view class='item'>
+      <image src='/image/img/book6.jpg'></image>
+      <view>
+        <text class='tit'>在读榜</text>
+      </view>
+    </view>
+    <view class='item'>
+      <image src='/image/img/book6.jpg'></image>
+      <view>
+        <text class='tit'>在读榜</text>
+      </view>
+    </view> -->
+  </view>
+  
+</view>

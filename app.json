@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/books/book-detail",
+    "pages/leader/leadManage",
+    "pages/read/read",
+    "pages/books/book-pub",
+    "pages/index/index",
+    "pages/classify/classifyManage",
+    "pages/classify/classifyManageEdit",
+    "pages/leader/leadEdit",
+    "pages/my/libraryManage",
+    "pages/desk/desk",
+    "pages/logs/logs",
+    "pages/books/books",
+    "pages/classify/classify",
+    "pages/read/read-detail",
+    "pages/my/libraryManageEdit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#444",
+    "navigationBarTitleText": "蜗牛阅读",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#d8d8d8",
+    "selectedColor": "#444",
+    "list": [
+      {
+        "pagePath": "pages/read/read",
+        "text": "领读",
+        "iconPath": "/image/tab_icon1.png",
+        "selectedIconPath": "/image/tab_icon1_active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/image/tab_icon2.png",
+        "selectedIconPath": "/image/tab_icon2_active.png"
+      },
+      {
+        "pagePath": "pages/desk/desk",
+        "text": "书桌",
+        "iconPath": "/image/tab_icon3.png",
+        "selectedIconPath": "/image/tab_icon3_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/image/tab_icon4.png",
+        "selectedIconPath": "/image/tab_icon4_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

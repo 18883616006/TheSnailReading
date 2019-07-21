@@ -1,0 +1,157 @@
+.headTop{
+  /* height: 575rpx; */
+  width: 100%;
+  /* border: 1rpx solid red; */
+  position: relative;
+  /* text-align: center; */
+  /* margin-bottom: 10rpx; */
+}
+.editTit{
+  font-size: 32rpx;
+  color: #b89477;
+  display: inline-block;
+  position: absolute;
+  top: 30rpx;
+  right: 40rpx;
+}
+.headPortrait{
+  width: 100%;
+  /* height: 300rpx; */
+  text-align: center;
+  position: relative;
+  /* border: 1rpx solid black; */
+  /* margin-bottom: 74rpx; */
+}
+.headPortrait image{
+  margin-top: 60rpx;
+  height: 162rpx;
+  width: 162rpx;
+  border-radius: 100%;
+  display: inline-block;
+  /* margin-bottom: 45rpx; */
+}
+.headPortrait text{
+  display: inline-block;
+  width: 100%;
+}
+.headPortrait .iconfont{
+  position: relative;
+  left: 60rpx;
+  bottom: 50rpx;
+  font-size: 56rpx;
+}
+.headPortrait .iconfont.icon-nan{
+  color:blue;
+}
+.headPortrait .iconfont.icon-nv{
+  color:pink;
+}
+.headPortrait .userName{
+  font-size: 32rpx;
+  font-weight: bold;
+  position: relative;
+  bottom: 50rpx;
+}
+
+.userRecords{
+  /* height: 182rpx; */
+  width: 100%;
+  /* border: 1rpx solid blue; */
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.userRecords .box{
+  height: 100rpx;
+  width: 40%;
+  /* border: 1rpx solid pink; */
+  text-align: center;
+  font-size: 30rpx;
+  display: flex;
+  align-items:center;
+  flex-wrap: wrap;
+}
+.userRecords .time,.money{
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  color: #444444;
+}
+.userRecords .verticalLine{
+  width: 3rpx;
+  height: 40rpx;
+  background-color: #b3b3b3;
+}
+.userRecords .tit{
+  width: 100%;
+  display: inline-block;
+  color: #b3b3b3;
+}
+.userRecords .iconfont{
+  position: absolute;
+  right: 30rpx;
+  color: #b6b6b6;
+}
+
+.dividingLine{
+  position: absolute;
+  width: 100%;
+  height: 16rpx;
+  background-color: #f6f6f6;
+}
+
+.footBottom{
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  /* border: 1rpx solid blue; */
+}
+.footList{
+  width: 100%;
+  height: 120rpx;
+  /* border: 1rpx solid green; */
+  display: flex;
+  align-items:center;
+}
+.footList:nth-child(1){
+  margin-top: 30rpx;
+}
+.footList .type{
+  position: absolute;
+  color: #d6d6d6;
+  left: 30rpx;
+  /* font-size: 36rpx; */
+}
+.footList .tit{
+  position: relative;
+  color: #444444;
+  display: inline-block;
+  font-size: 30rpx;
+  left: 105rpx;
+}
+.footList .jiantou{
+  position: absolute;
+  color: #b3b3b3;
+  right: 30rpx;
+  /* font-size: 22rpx; */
+}
+.userinfo {
+  width: 100%;
+  height: 428rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo button{
+  margin-top: 160rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}

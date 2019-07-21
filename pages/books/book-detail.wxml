@@ -1,0 +1,78 @@
+<!--pages/book-detail/book-detail.wxml-->
+<!-- <view class='info'>
+  <image src='{{detailData.imgurl}}'></image>
+  <view class='tit'>{{detailData.bookname}}</view>
+  <view class='author'>{{detailData.author}}</view>
+</view>
+
+<view class='tab'>
+  <text class='{{isShow?"active":""}}' bindtap='handleTab' data-abc='0'>详情</text>
+  <text class='{{isShow?"":"active"}}' bindtap='handleTab' data-abc='1'>目录</text>
+</view>
+<view class='intro' wx:if='{{isShow}}'>
+  {{detailData.intro}}
+</view>
+<view class='catalog' wx:if='{{!isShow}}'>
+  <view wx:for='{{detailData.catalog}}' wx:key='{{index}}'>
+    {{item}}
+  </view>
+</view>
+
+<view class='btn-cont'>
+  <view bindtap='handleAdd'>
+    <text wx:if='{{!isAdd}}'>加入书桌</text>
+    <text wx:if='{{isAdd}}' class='color-gray'>移出书桌</text>
+  </view>
+  <view>阅读</view>
+</view> -->
+<!--pages/book-detail/book-detail.wxml-->
+<view class='info'>
+  <image src='{{detailData.imgurl}}'></image>
+  <view class='tit'>{{detailData.bookname}}</view>
+  <view class='author'>{{detailData.author}}</view>
+</view>
+
+<view class='tab'>
+  <text class='{{isShow?"active":""}}' bindtap='handleTab' data-abc='0'>详情</text>
+  <text class='{{isShow?"":"active"}}' bindtap='handleTab' data-abc='1'>目录</text>
+</view>
+<view class='intro' wx:if='{{isShow}}'>
+  {{detailData.intro}}
+</view>
+<view class='catalog' wx:if='{{!isShow}}'>
+  <view wx:for='{{detailData.catalog}}' wx:key='{{index}}'>
+    {{item}}
+  </view>
+</view>
+
+<view class='{{!isreviewShow?"blank":"reviewTitle"}}'>
+  <view class='title'>评论</view>
+  <view class='num'>({{reviewNum}})</view>
+  <view class='writeTit' bindtap='handlewrite'>写评论</view>
+</view>
+
+<view class='review' wx:for='{{reviewData}}' wx:key='{{index}}'>
+
+  <view class='line'></view>
+  <view class='userReview'>
+    <image src='{{item.userimage}}'></image>
+    <text class='userName'>{{item.username}}</text>
+  </view>
+
+  <view class='word'>
+    {{item.word}}
+  </view>
+
+</view>
+<form class='write' wx:if='{{isWrite}}' bindsubmit='handlesubmit'>
+  <textarea type='text' name='word' placeholder='请输入评论'></textarea>
+  <button form-type='submit'>发送</button>
+</form>
+
+<view class='btn-cont'>
+  <view bindtap='handleAdd'>
+    <text wx:if='{{!isAdd}}'>加入书桌</text>
+    <text wx:if='{{isAdd}}' class='color-gray'>移出书桌</text>
+  </view>
+  <view class='read' bindtap='handleRead'>阅读</view>
+</view>

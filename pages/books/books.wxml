@@ -1,0 +1,11 @@
+<view class='cont'>
+  <view 
+  class='item' 
+  wx:for='{{booksData}}' 
+  wx:key='{{index}}' 
+  bindtap='handleDetail' 
+  data-id='{{item.objId}}'>
+    <image src='{{item.imgurl}}'></image>
+    <view>{{item.bookname}}</view>
+  </view>
+</view>

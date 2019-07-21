@@ -1,0 +1,113 @@
+/* pages/my/libraryManage.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.cont {
+  width: 100%;
+  position: relative;
+  /* border: 1rpx solid blue; *//* padding: 0rpx 30rpx; *//* padding-right: 100rpx; */
+}
+
+.headTop {
+  width: 100%;
+  height: 80rpx;
+  /* border: 1rpx solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: fixed;
+  z-index: 2;
+  margin-top: -96rpx;
+  box-shadow: 0 0 20rpx 1rpx rgba(0, 0, 0, 0.08);
+  /* margin-top:0;
+  padding-top:-10rpx;  
+   */
+}
+
+.headTop text {
+  display: inline-block;
+  color: #444;
+  font-size: 42rpx;
+}
+
+.headTop .iconfont {
+  position: absolute;
+  left: 30rpx;
+}
+
+.subject  .list {
+  margin-bottom: 20rpx;
+  width: 100%;
+  background: #fff;
+  /* height: 500rpx; *//* border: 1rpx solid blue; */
+  position: relative;
+  /* margin-bottom:  *//* display: flex;
+  justify-content:space-around;  *//* padding: 30rpx 30rpx 0 30rpx; *//* text-align: center; */
+}
+
+.list .title {
+  width: 180rpx;
+  /* height: 50rpx; */
+  display: inline-block;
+  /* border: 1rpx solid red; */
+  margin: 30rpx 0 30rpx 30rpx;
+  text-align: center;
+  position: relative;
+}
+.list:first-child{
+  margin-top: 96rpx;
+}
+.title image {
+  width: 100%;
+  height: 250rpx;
+}
+
+.title .bookname {
+  display: inline-block;
+  width: 100%;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.title .author {
+  display: inline-block;
+  width: 100%;
+  font-size: 24rpx;
+  color: #149bb3;
+}
+
+/* .list .trunk{
+  width: 70%;
+  display: inline-block;
+  border: 1rpx solid rebeccapurple;
+} */
+
+.botton {
+  /* border: 1rpx  solid pink; */
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+  display: inline-block;
+}
+
+.edit, .del {
+  /* width: 80rpx; *//* border: 1rpx  solid peru; */
+  display: inline-block;
+  font-size: 30rpx;
+  color: #b3b3b3;
+  margin-right: 30rpx;
+}
+
+.word {
+  height: 280rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  position: absolute;
+  top: 90rpx;
+  left: 240rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

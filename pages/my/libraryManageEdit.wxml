@@ -1,0 +1,31 @@
+
+<view class='form-cont'>
+  <form bindsubmit='handleAdd' class='form'>
+    <!-- (这里本来应该是下拉框，但是时间不多了，先这样吧) -->
+    <view>图书分类</view>
+    <input type='text' name='classify' placeholder='请输入图书分类' value='{{bookdata.classify}}'></input>
+
+    <view>图书名称</view>
+    <input type='text' name='bookname' placeholder='请输入图书名称' value='{{bookdata.bookname}}'></input>
+
+    <view>作者名称</view>
+    <input type='text' name='author' placeholder='请输入作者名称' value='{{bookdata.author}}'></input>
+
+    <view>书籍图片</view>
+    <view class='cont'>
+      <view class='img-cont' wx:if='{{imgUrl}}'>
+        <image src='{{imgUrl}}' mode='aspectFill'></image>
+      </view>
+      
+      <view class='img-cont' bindtap='handleUpload'>
+        +
+      </view>
+
+    </view>
+
+    <view>简介</view>
+    <textarea placeholder='请输入简介' name='intro' value='{{bookdata.intro}}'></textarea>
+
+    <button form-type='submit'>确定发布</button>
+  </form>
+</view>
