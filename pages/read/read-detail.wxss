@@ -1,0 +1,74 @@
+/* pages/read-detail/read-detail.wxss */
+.list{
+  padding:0 30rpx;
+  background: #FFF;
+  margin-top: 20rpx;
+  /* border: 1px solid red */
+}
+
+.author{
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.author image{ 
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 25rpx;
+}
+
+.big-pic{
+  width: 690rpx;
+  height: 300rpx;
+}
+.tit{
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 54rpx;
+  margin-bottom: 20rpx;
+}
+.icon-xihuan1{
+  color: red;
+}
+.tit view{
+  width: 74rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  background: #bc7878;
+  color: #FFF;
+  text-align: center;
+  line-height: 40rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+  position: relative;
+  top: -5rpx;
+
+}
+
+.intro{
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: #7f7f7f;
+}
+
+.fix-cont{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 20rpx 1rpx rgba(0,0,0,0.1);
+      /* x轴   y轴   模糊度   宽度   颜色 */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fix-cont .iconfont{
+  font-weight: bold;
+  font-size: 40rpx
+}
+.icon-xin{
+  color: orange
+}

@@ -1,0 +1,43 @@
+/* pages/my/libraryManageEdit.wxss */
+.form-cont{
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+
+.form-cont input{
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.form-cont textarea{
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  height: 200rpx;
+}
+.form-cont view{
+  margin-top:20rpx; 
+}
+
+.cont{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.img-cont{
+  width: 300rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  /* border: 1px solid #d8d8d8; */
+  font-size: 50rpx;
+}
+img-cont.aphp{
+  border-radius: 50%;
+}
+
+.img-cont image{
+  width: 100%;
+  height: 100%;
+}

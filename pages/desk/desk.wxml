@@ -1,0 +1,49 @@
+<!--pages/desk/desk.wxml-->
+<view class='icon-cont'>
+  <text class='iconfont icon-caidan' bindtap='handleShow'></text>
+</view>
+<swiper bindchange='handleChange'>
+  <block wx:for="{{deskData}}" wx:key='{{index}}' wx:if='{{index<5}}'>
+    <swiper-item>
+      <image src="{{item.imgurl}}" bindtap="handleDetial" 
+      data-bookid='{{item.objId}}'  class="slide-image" mode='aspectFill'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='line-cont'>
+  <view 
+  wx:for='{{deskData}}' 
+  wx:key='{{index}}' 
+  class='{{num==index?"active":""}}'  
+  wx:if='{{index<5}}'></view>
+</view>
+
+<view class='tit'>{{deskData[num].bookname}}</view>
+
+<view class='author'>{{deskData[num].author}}</view>
+
+<view class='all-book {{isShow?"show":""}}'>
+  <view class='top-cont'>
+    <text bindtap='handleHide'>关闭</text>
+    <text bindtap='handleEdit'>{{isCheckShow?"取消":"整理"}}</text>
+  </view>
+  <view class='cont'>
+   
+    <view class='item' wx:for='{{deskData}}' wx:key='{{index}}'>
+      <text 
+      class='iconfont icon-xuanze {{item.isCheck?"active":""}}' 
+      bindtap='handleCheck' 
+      data-idx='{{index}}' 
+      wx:if='{{isCheckShow}}'></text>
+      <image src='{{item.imgurl}}'></image>
+      <view>{{item.bookname}}</view>
+    </view>
+  </view>
+  <view class='botm-cont {{footShow?"":"foothidden"}}' >
+    <text>置顶</text>
+    <text bindtap='handleDel'>删除</text>
+  </view>
+</view>
+
+

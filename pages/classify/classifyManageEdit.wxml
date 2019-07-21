@@ -1,0 +1,32 @@
+
+<view class='form-cont'>
+  <form bindsubmit='handleAdd' class='form'>
+
+    <view>分类</view>
+    <input type='text' name='cfy' placeholder='请输入分类' value='{{classdata.cfy}}'></input>
+
+    <view>标题</view>
+    <input type='text' name='tit' placeholder='请输入标题' value='{{classdata.tit}}'></input>
+
+    <view>英文标题</view>
+    <input type='text' name='en_tit' placeholder='请输入英文标题' value='{{classdata.en_tit}}'></input>
+
+    <view>是否hot</view>
+    <input type='text' name='ishot' placeholder='请输入作者名称' value='{{classdata.ishot}}'></input>
+
+    <view>分类图片</view>
+    <view class='cont'>
+      <view class='img-cont' wx:if='{{imgUrl}}'>
+        <image src='{{imgUrl}}' mode='aspectFill'></image>
+      </view>
+      
+      <view class='img-cont' bindtap='handleUpload'>
+        +
+      </view>
+
+    </view>
+
+
+    <button form-type='submit'>确定发布</button>
+  </form>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/read-detail/read-detail.wxml-->
+<view class='list'>
+  <view class='tit'>
+    {{detailData.tit}}
+  </view>
+  <view class='author'>
+    <image src='{{detailData.aPhoto}}'></image>
+    {{detailData.author}}
+  </view>
+
+  <image class='big-pic' src='/image/bigPic.png'></image>
+
+  <view class='intro'>
+    {{detailData.words}}
+  </view>
+
+</view>
+
+<view class='fix-cont'>
+  <text class='iconfont icon-praise_icon'></text>
+  <text class='iconfont {{isCollect?"icon-xihuan1":"icon-xihuan"}}' bindtap='handleCollect'></text>
+  <text class='iconfont icon-fenxiang'></text>
+</view>

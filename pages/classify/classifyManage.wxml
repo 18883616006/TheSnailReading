@@ -1,0 +1,24 @@
+<view class='cont'>
+  <view class='headTop' bindtap='handlechange'>
+    <!-- <text class='iconfont icon-jiantou2'></text> -->
+    <text>发布新内容</text>
+  </view>
+
+  <view class='subject'>
+
+    <view class='list' wx:for='{{classData}}' wx:key='{{index}}'>
+      <view class='title'>
+        <image src='{{item.imgUrl}}'></image>
+        <text class='bookname'>{{item.tit}}</text>
+        <text class='author'>{{item.en_tit}}</text>
+      </view>
+      <view class='botton'>
+        <view class='edit'bindtap='handleedit' data-id='{{item.objId}}'>编辑</view>
+        <view class='del' bindtap='handledel' data-id='{{item.objId}}'>删除</view>
+      </view>
+      <text class='word'>{{item.words}}</text>
+
+    </view>
+  </view>
+  
+</view>

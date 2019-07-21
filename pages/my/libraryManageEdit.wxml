@@ -1,0 +1,34 @@
+
+<view class='form-cont'>
+  <form bindsubmit='handleAdd' class='form'>
+    <!-- (这里本来应该是下拉框，但是时间不多了，先这样吧) -->
+    <view>图书分类</view>
+    <input type='text' name='classify' placeholder='请输入图书分类' value='{{bookdata.classify}}'></input>
+
+    <view>图书名称</view>
+    <input type='text' name='bookname' placeholder='请输入图书名称' value='{{bookdata.bookname}}'></input>
+
+    <view>作者名称</view>
+    <input type='text' name='author' placeholder='请输入作者名称' value='{{bookdata.author}}'></input>
+
+    <view>书籍图片</view>
+    <view class='cont'>
+      <view class='img-cont' wx:if='{{imgUrl}}'>
+        <image src='{{imgUrl}}' mode='aspectFill'></image>
+      </view>
+      
+      <view class='img-cont' bindtap='handleUpload'>
+        +
+      </view>
+
+    </view>
+
+    <view>简介</view>
+    <textarea placeholder='请输入简介' name='intro' value='{{bookdata.intro}}'></textarea>
+
+    <!-- <view>图书目录</view>
+    <textarea placeholder='请输入目录' name='catalog' value='PART 1 创业1998-2004$第1章 少年：喜欢天文的Pony站长$第2章 开局：并不清晰的出发$第3章 生死：泡沫破灭中的挣扎$第4章 梦网：意外的拯救者$第5章 QQ秀：真实世界的倒影$第6章 上市：夹击中的“成人礼”$第7章 调整：一站式在线生活$第8章 战MSN：'></textarea> -->
+
+    <button form-type='submit'>确定发布</button>
+  </form>
+</view>

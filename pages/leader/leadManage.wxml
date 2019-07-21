@@ -1,0 +1,37 @@
+<view class='count'>
+  <view class='title' wx:if='{{isManage}}' bindtap='handlechange'>
+    <text>发布领读</text>
+  </view>
+
+  <view class='list' wx:for='{{listData}}' wx:key='{{index}}'>
+    <view class='author'>
+      <view class='author-left'>
+        <image src='{{item.aPhoto}}'></image>
+        <view>{{item.author}}</view>
+      </view>
+      <view class='btn-cont' wx:if='{{isManage}}'>
+        <view class='edit'bindtap='handleedit' data-id='{{item.objId}}'>编辑</view>
+        <view class='del' bindtap='handledel' data-id='{{item.objId}}'>删除</view>
+      </view>
+    </view>
+
+    <image class='big-pic' src='{{item.bigImg}}'></image>
+
+    <view class='tit'>
+      <view>热点</view>
+      {{item.tit}}
+    </view>
+
+    <view class='intro'>
+      {{item.intro}}
+    </view>
+
+    <view class='botm-cont'>
+      <view>{{item.clickNum}}点击 · 6本书</view>
+      <view>
+        {{item.great}}
+        <!-- <text class='iconfont icon-zan'></text> -->
+      </view>
+    </view>
+  </view>
+</view>

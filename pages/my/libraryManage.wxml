@@ -1,0 +1,38 @@
+<view class='cont'>
+  <view class='headTop' bindtap='handlechange'>
+    <!-- <text class='iconfont icon-jiantou2'></text> -->
+    <text>发布新内容</text>
+  </view>
+
+  <view class='subject'>
+
+    <!-- <view class='list'>
+      <view class='title'>
+        <image src='/image/img/photo2.jpg'></image>
+        <text class='bookname'>图书名称</text>
+        <text class='author'>作者</text>
+      </view>
+      <view class='botton'>
+        <view class='edit'>编辑</view>
+        <view class='del'>删除</view>
+      </view>
+
+      <text class='word'>6 月 13 日，澎湃新闻记者获悉，京东集团（Nasdaq：JD）与美国磁飞机技术公司（Magplane Technology, Inc. Nasdaq：MAGP）签订战略合作协议，将各自发挥场景、技术优势，在仓储和物流领域开拓磁悬浮和直驱磁动力技术，推动其在智慧物流层面的应用落地 ... </text>
+    </view> -->
+
+    <view class='list' wx:for='{{booksData}}' wx:key='{{index}}'>
+      <view class='title'>
+        <image src='{{item.imgurl}}'></image>
+        <text class='bookname'>{{item.bookname}}</text>
+        <text class='author'>{{item.author}}</text>
+      </view>
+      <view class='botton'>
+        <view class='edit'bindtap='handleedit' data-id='{{item.objId}}'>编辑</view>
+        <view class='del' bindtap='handledel' data-id='{{item.objId}}'>删除</view>
+      </view>
+      <text class='word'>{{item.intro}}</text>
+
+    </view>
+  </view>
+  
+</view>

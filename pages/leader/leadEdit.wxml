@@ -1,0 +1,43 @@
+<view class='form-cont'>
+  <form bindsubmit='handleAdd' class='form'>
+
+    <view>领读id</view>
+    <input type='text' name='id' placeholder='请输入领读id' value='{{leaderdata.id}}'></input>
+
+    <view>作者名称</view>
+    <input type='text' name='author' placeholder='请输入作者名称' value='{{leaderdata.author}}'></input>
+
+    <view>标题</view>
+    <input type='text' name='tit' placeholder='请输入图书名称' value='{{leaderdata.tit}}'></input>
+
+    <view>头像</view>
+    <view class='cont'>
+      <view class='img-cont aphp' wx:if='{{imgUrlAph}}'>
+        <image src='{{imgUrlAph}}' mode='aspectFill'></image>
+      </view>
+
+      <view class='img-cont' bindtap='handleUpload' data-abc='{{1}}'>
+        +
+      </view>
+
+    </view>
+
+    <view>领读图片</view>
+    <view class='cont'>
+      <view class='img-cont' wx:if='{{imgUrl}}'>
+        <image src='{{imgUrl}}' mode='aspectFill'></image>
+      </view>
+
+      <view class='img-cont' bindtap='handleUpload' data-abc='{{0}}'>
+        +
+      </view>
+
+    </view>
+
+    <view>详情</view>
+    <textarea placeholder='请输入详情' name='words' value='{{leaderdata.words}}'></textarea>
+
+
+    <button form-type='submit'>确定发布</button>
+  </form>
+</view>
